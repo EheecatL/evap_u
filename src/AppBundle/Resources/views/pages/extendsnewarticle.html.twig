@@ -1,0 +1,94 @@
+{% extends '@App/base/index.html.twig' %}
+
+{% block header %}
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 text-center mt-5 mb-5">
+                Interface d'Admnistration
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block adminmenu %}
+
+    <div class="container">
+        <div class="row text-center pt-5">
+            <div class="col-4"><a href="{{ path('admin_articles')}}">Articles</a></div>
+            <div class="col-4">Utilisateurs</div>
+            <div class="col-4">Produits</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row text-center pt-1 mb-1">
+            <div class="col-4">
+                <a href="{{ path('new_article')}}">
+                    Ajout (<i class="fas fa-plus text-success"></i>)
+                </a>
+            </div>
+            <div class="offset-4 col-4">
+                Ajout (<i class="fas fa-plus text-success"></i>)
+            </div>
+        </div>
+    </div>
+    <hr class="mb-3">
+
+{% endblock %}
+
+{% block content %}
+
+    <div class="container-fluid">`
+
+            {{ form_start(formArticle) }}
+
+            <div class="col-12 text-center">
+                {{ form_label(formArticle.title, 'Titre') }}
+            </div>
+            <div class="col-12 text-center mb-3">
+                {{ form_widget(formArticle.title) }}
+            </div>
+
+            <div class="col-12 text-center">
+                {{ form_label(formArticle.source, 'Source') }}
+            </div>
+            <div  class="col-12 text-center mb-3">
+                {{ form_widget(formArticle.source) }}
+            </div>
+
+            <div class="col-12 text-center">
+                {{ form_label(formArticle.releasedate, "Date de l'article") }}
+            </div>
+            <div class="col-12 text-center mb-3">
+                {{ form_widget(formArticle.releasedate) }}
+            </div>
+
+            <div class="col-12 text-center">
+                {{ form_label(formArticle.content, 'Contenu') }}
+            </div>
+            <div class="col-12 text-center mb-3">
+                {{ form_widget(formArticle.content) }}
+            </div>
+
+            <div class="offset-4 col-4 text-center">
+            <img class="img-fluid" src="{{ asset('uploads/img/'~article.image) }}" >
+            </div>
+            <div class="col-12 text-center">
+                {{ form_label(formArticle.image) }}
+            </div>
+            <div class="col-12 text-center">
+                {{ form_widget(formArticle.image) }}
+            </div>
+
+            <div class="col-12 text-center mt-5">
+                {{ form_widget(formArticle.save) }}
+            </div>
+            {{ form_end(formArticle) }}
+
+        </div>
+    </div>
+
+
+
+{% endblock %}

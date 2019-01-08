@@ -1,0 +1,111 @@
+{% extends '@App/base/index.html.twig' %}
+
+{% block header %}
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 text-center mt-5">
+            Interface d'Admnistration
+            </div>
+            <div class="col-12 text-center mb-5">
+                <a href="{{ path('homepage')}}">
+                    - Retour Accueil -
+                </a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block adminmenu %}
+
+    <div class="container">
+        <div class="row text-center pt-5">
+            <div class="col-4">Articles</div>
+            <div class="col-4">Utilisateurs</div>
+            <div class="col-4">Produits</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row text-center pt-1 mb-1">
+            <div class="col-4">
+                <a href="{{ path('new_article')}}">
+                    Ajout (<i class="fas fa-plus text-success"></i>)
+                </a>
+            </div>
+            <div class="offset-4 col-4">
+                Ajout (<i class="fas fa-plus text-success"></i>)
+            </div>
+        </div>
+    </div>
+    <hr class="mb-3">
+
+{% endblock %}
+
+{% block flash %}
+{% for message in app.flashes('notice') %}
+    <div class="col-12 text-center mb-3 alert">
+        {{ message }}
+    </div>
+{% endfor %}
+{% endblock %}
+
+{% block content %}
+
+    <div class="container listadminlabel pb-2 pt-2">
+        <div class="row text-center">
+            <div class="col-4">
+
+                TITRE
+
+            </div>
+            <div class="offset-1 col-2">
+
+                SOURCE
+
+            </div>
+            <div class="offset-2 col-2">
+                ACTIONS
+            </div>
+        </div>
+    </div>
+
+<div class="container listadmin pt-1 pb-1 mb-5">
+
+
+            {% for article in articles %}
+
+                <hr>
+                <div class="container mb-4">
+                    <div class="row">
+                        <div class="col-3">
+
+                            {{ article.title }}
+
+                        </div>
+                        <div class="offset-2 col-2 align-self-center">
+
+                            {{ article.source }}
+
+                        </div>
+                        <div class="offset-2 align-self-center">
+                            <a href="{{ path('update_article', {'id': article.id}) }}">
+                                <button type="button" class="btn btn-primary">
+                                    Modifier
+                                </button>
+                            </a>
+                            <a href="{{ path('del_article', {'id': article.id}) }}">
+                                <button type="button" class="btn btn-danger">
+                                    Supprimer
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+            {% endfor %}
+
+</div>
+
+{% endblock %}

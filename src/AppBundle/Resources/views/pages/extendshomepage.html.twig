@@ -1,0 +1,37 @@
+{% extends '@App/base/index.html.twig' %}
+
+{% block title %}
+
+    Accueil
+
+{% endblock %}
+
+{% block header %}{% endblock %}
+
+{% block content %}
+
+    <div class="container-fluid homepage">
+        <div class="row">
+            <div class="col-6 d-flex align-items-center justify-content-center homebox hbarticles">
+                <a href="{{ path('articles') }}"><div class="hptxt">Articles</div></a>
+            </div>
+            <div class="col-6 d-flex align-items-center justify-content-center homebox hbprofile">
+                <div class="hptxt">Profil</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 d-flex align-items-center justify-content-center homebox hbproducts">
+                <a href="{{ path('products') }}"><div class="hptxt">Matériel</div></a>
+            </div>
+            <div class="col-6 d-flex align-items-center justify-content-center homebox hbforum">
+                <div class="hptxt">Contact</div>
+            </div>
+        </div>
+    </div>
+
+    <img src="../img/logoiv.png" class="hplogo" width="10%">
+
+{% endblock %}
+
+{% block footer %}{% endblock %}
+

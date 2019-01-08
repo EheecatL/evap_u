@@ -1,0 +1,273 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.cls {
+    clear: both;
+}
+
+a{
+    text-decoration: none;
+    z-index: 2;
+}
+
+a:hover{
+    text-decoration: none;
+    z-index: 2;
+}
+
+.homepage{
+    position: relative;
+}
+
+.homebox {
+    height: 50vh;
+    /*border: 1px black solid;*/
+}
+
+
+.hptxt{
+    font-weight: bold;
+    color: white;
+    font-size: 30px;
+    z-index: 2;
+}
+
+.hptxt:hover{
+    color: rgba(52, 73, 94, 1);
+}
+
+.hplogo{
+    position: absolute;
+    top: 37%;
+    left: 45.04%;
+    z-index: 99;
+}
+
+.hbforum {
+    background-image: url("../img/hbforum.jpg");
+    background-size: cover;
+}
+
+.hbarticles {
+    background-image: url("../img/hbarticles.jpg");
+    background-size: cover;
+    background-position: bottom;
+    z-index: 1;
+}
+
+.hbarticles:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to right, white 0%, rgba(0,0,0,0) 0%);
+    opacity: .6;
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+}
+
+.hbarticles:hover::before {
+    background-image: linear-gradient(to right, white 0%, rgba(0,0,0,0) 50%);
+    background-size: 200% 200%;
+    transition: background-size .35s, background-image .35s;
+}
+
+.hbproducts {
+    background-image: url("../img/hbproducts.jpg");
+    background-size: cover;
+    background-position: bottom;
+    z-index: 1;
+}
+
+.hbproducts:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to right, white 0%, rgba(0,0,0,0) 0%);
+    opacity: .6;
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+}
+
+.hbproducts:hover::before {
+    background-image: linear-gradient(to right, white 0%, rgba(0,0,0,0) 50%);
+    background-size: 200% 200%;
+    transition: background-size .35s, background-image .35s;
+}
+
+.hbprofile {
+    background-image: url("../img/hbprofile.jpg");
+    background-size: cover;
+    z-index: 1;
+}
+
+.hbprofile:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to right, white 0%, rgba(0,0,0,0) 0%);
+    opacity: .6;
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+}
+
+.hbprofile:hover::before {
+    background-image: linear-gradient(to right, white 0%, rgba(0,0,0,0) 50%);
+    background-size: 200% 200%;
+    transition: background-size .35s, background-image .35s;
+}
+
+.hbforum {
+    background-image: url("../img/hbforum.jpg");
+    background-size: cover;
+    z-index: 1;
+}
+
+.hbforum:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to right, white 0%, rgba(0,0,0,0) 0%);
+    opacity: .6;
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+}
+
+.hbforum:hover::before {
+    background-image: linear-gradient(to right, white 0%, rgba(0,0,0,0) 50%);
+    background-size: 200% 200%;
+    transition: background-size .35s, background-image .35s;
+}
+
+.header {
+
+    background-color: rgba(52, 73, 94, 1);
+    position: relative;
+}
+
+.brand{
+    font-size: 50px;
+    color: rgb(247,246,210);
+    position: absolute;
+    left: 180px;
+}
+
+.dotart{
+    position: absolute;
+    top: 50px;
+    left: 655px;
+    color: rgb(247,246,210);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.dotprod{
+    position: absolute;
+    top: 50px;
+    left: 775px;
+    color: rgb(247,246,210);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.dotfor{
+    position: absolute;
+    top: 50px;
+    left: 655px;
+    color: rgb(247,246,210);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.dotprof{
+    position: absolute;
+    top: 50px;
+    left: 655px;
+    color: rgb(247,246,210);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.articles{
+    float: left;
+}
+
+.read {
+    color: black;
+}
+
+.listadmin{
+    width: 80%;
+    background-color: lightgrey;
+    border: 1px black solid;
+}
+
+.listadminlabel{
+    width: 80%;
+    background-color: black;
+    color: white;
+}
+
+.alert {
+    width: 100%;
+    background-color: limegreen;
+    color: green;
+    border :1px solid green;
+}
+
+.titres {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.artcontent {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.srce {
+    font-size: 12px;
+    font-style: italic;
+}
+
+.bgcg{
+    background-color: ghostwhite;
+}
+
+.return{
+    color: black;
+}
+
+.return:hover{
+    color: black;
+}
+
+.tbp{
+    color: rgb(247,246,210);
+}
+
+.tbp:hover{
+    color: rgba(1, 50, 67, 1);
+}
+
+.footer {
+    background-color: rgba(52, 73, 94, 1);
+    color: rgb(247,246,210);
+}

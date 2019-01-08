@@ -1,0 +1,36 @@
+{% extends '@App/base/index.html.twig' %}
+
+{% block title %}
+    Recherche
+{% endblock %}
+
+{% block content %}
+
+    {% if reserch is empty %}
+        <div class="offset-4 col-4 text-center mt-5">
+            {{ 'Entrer un mot' }}<br>
+            <a href="{{ path('products') }}">Retour</a>
+        </div>
+    {% else  %}
+
+        <h2 class="mb-5">Voici le(s) résultat(s) de la recherche : "{{ reserch }}"</h2>
+        <br>
+
+        {% for result in results  %}
+
+            <h2>-> {{ result.title }}</h2>
+
+            <p>{{ result.releasedate | date("d/m/y")}}</p>
+            <br>
+
+        {% endfor %}
+
+    {% endif %}
+
+
+
+
+
+
+
+{% endblock %}
