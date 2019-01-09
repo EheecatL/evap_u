@@ -267,6 +267,15 @@ a:hover{
     color: rgba(1, 50, 67, 1);
 }
 
+.contact{
+    border-color: rgba(52, 73, 94, 1);
+    border-style: solid;
+    border-width: 4px;
+    background-color: rgb(247,246,210);
+    color: rgba(52, 73, 94, 1);
+
+}
+
 .footer {
     background-color: rgba(52, 73, 94, 1);
     color: rgb(247,246,210);
