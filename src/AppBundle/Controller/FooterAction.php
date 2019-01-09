@@ -18,10 +18,20 @@ class FooterAction extends Controller
     /**
      * @Route("/legalnotices", name="legal_notices")
      */
-    public function HomeAction()
+    public function LegalAction()
     {
 
         return $this->render('@App/pages/extendslegalnotices.html.twig');
+
+    }
+
+    /**
+     * @Route("/privacypolicy", name="privacy_policy")
+     */
+    public function PrivacyAction()
+    {
+
+        return $this->render('@App/pages/extendsprivacypolicy.html.twig');
 
     }
 }

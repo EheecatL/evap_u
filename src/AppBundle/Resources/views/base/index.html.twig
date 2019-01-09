@@ -27,7 +27,7 @@
                 </div>
                 <div class="col-1 offset-3 tbp"><a href="{{ path('articles') }}" class="tbp">Articles</a></div>
                 <div class="col-1 tbp"><a href="{{ path('products') }}" class="tbp">Matériel</a></div>
-                <div class="col-1 tbp">Forum</div>
+                <div class="col-1 tbp"><a href="{{ path('contact') }}" class="tbp">Contact</a></div>
                 {% if app.user %}
                     <div class="col-1 text-warning font-weight-bold">{{ app.user.username }}</div>
                 {% else %}
@@ -61,7 +61,9 @@
                     <div>Mentions légales</div>
                 </a>
                 <div class="col-4">© Copyright By Evap'U</div>
-                <div class="col-4">Politique de confidentialité</div>
+                <a href="{{ path('privacy_policy') }}"  class="col-4">
+                    <div>Politique de confidentialité</div>
+                </a>
             </div>
 
         </div>
