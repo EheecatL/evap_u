@@ -12,33 +12,57 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
-{% block header %}
-    <header class="mb-5">
 
+{% block header %}
+
+    <header class="mb-5">
         <div class="container-fluid header">
             <div class="row text-center align-items-center text-light">
-                <div class="col-2 text-center pt-2 pb-2">
+                <div class="offset-1 col-2 text-center pt-2 pb-2">
                     <a href="{{ path('homepage') }}">
-                        <img src="{{ asset('img/logoiv.png') }}" class="img-fluid" width="40%" >
+                        <img src="{{ asset('img/logobrand.png') }}" class="img-fluid" >
                     </a>
                 </div>
-                <div class="brand">
-                    Evap'U
-                </div>
+
                 <div class="col-1 offset-3 tbp"><a href="{{ path('articles') }}" class="tbp">Articles</a></div>
                 <div class="col-1 tbp"><a href="{{ path('products') }}" class="tbp">Matériel</a></div>
                 <div class="col-1 tbp"><a href="{{ path('contact') }}" class="tbp">Contact</a></div>
                 {% if app.user %}
-                    <div class="col-1 text-warning font-weight-bold">{{ app.user.username }}</div>
+                    <div class="col-1 font-weight-bold tbp prof">
+                        {{ app.user.username }}
+                    <div class="col-1 prof2">
+                        <div>
+                            <a href="{{ path('profile') }}" class="tbp tbpmin">
+                            Profil
+                            </a>
+                        </div>
+                        <div>
+                            <a href="{{ path('fos_user_security_logout') }}" class="tbp tbpmin">
+                            Déconnexion
+                            </a>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-2">
+                        <form action="{{ path('research_articles') }}" method="get" class="d-flex align-items-center">
+                            <input name="research" type="text" placeholder="Articles" class="mr-4">
+                            <input type="image" name="submit" src="{{ asset("img/search.svg") }}" style="width: 10%">
+                        </form>
+                    </div>
                 {% else %}
-                    <div class="col-1 tbp">Connexion</div>
+                    <div class="col-1 tbp">
+                        <a href="{{ path('fos_user_security_login') }}" class="tbp">
+                            Connexion
+                        </a>
+                    </div>
+                    <div class="col-2">
+                        <form action="{{ path('research_articles') }}" method="get" class="d-flex align-items-center">
+                            <input name="research" type="text" placeholder="Articles" class="mr-4">
+                            <input type="image" name="submit" src="{{ asset("img/search.svg") }}" style="width: 10%">
+                        </form>
+                    </div>
                 {% endif %}
-                <div class="col-3">
-                    <form action="{{ path('research_articles') }}" method="get" class="d-flex align-items-center">
-                        <input name="research" type="text" class="mr-4">
-                        <input type="image" name="submit" src="{{ asset("img/search.svg") }}" style="width: 10%">
-                    </form>
-                </div>
+
             </div>
         </div>
     </header>
@@ -57,11 +81,11 @@
     <footer>
         <div class="footer container-fluid">
             <div class="row justify-content-between text-center pt-5 pb-5">
-                <a href="{{ path('legal_notices') }}"  class="col-4">
+                <a href="{{ path('legal_notices') }}"  class="col-4 tbp">
                     <div>Mentions légales</div>
                 </a>
                 <div class="col-4">© Copyright By Evap'U</div>
-                <a href="{{ path('privacy_policy') }}"  class="col-4">
+                <a href="{{ path('privacy_policy') }}"  class="col-4 tbp">
                     <div>Politique de confidentialité</div>
                 </a>
             </div>
@@ -83,10 +107,16 @@
         $('.JS').click(function(){
             $('.testAbsol').slideToggle(600);
         });
+
+        $(".prof").mouseenter(function() {
+            $(".prof2").fadeIn(500)
+        });
+
+        $(".prof").mouseleave(function() {
+            $(".prof2").fadeOut(500)
+        });
+
     });
-
-
-
 
 </script>
 </body>

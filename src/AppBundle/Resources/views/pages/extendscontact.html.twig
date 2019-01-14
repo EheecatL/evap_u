@@ -1,10 +1,24 @@
 {% extends '@App/base/index.html.twig' %}
 
+{% block title %}
+
+    Contact
+
+{% endblock %}
+
+{% block flash %}
+    {% for message in app.flashes('notice') %}
+        <div class="col-12 text-center mb-5 alert">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endblock %}
+
 {% block content %}
 
     <div class="container-fluid mb-5">
         <div class="row">
-            <div class="col-3 text-center titres">Nous Contacter</div>
+            <div class="col-3 text-center titres">Contact</div>
         </div>
     </div>
 

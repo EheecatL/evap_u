@@ -1,11 +1,22 @@
 {% extends '@App/base/index.html.twig' %}
 
+{% block title %}
+
+    Admin
+
+{% endblock %}
+
 {% block header %}
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 text-center mt-5 mb-5">
+            <div class="col-12 text-center mt-5">
                 Interface d'Admnistration
+            </div>
+            <div class="col-12 text-center mb-5">
+                <a href="{{ path('homepage')}}">
+                    - Retour Accueil -
+                </a>
             </div>
         </div>
     </div>
@@ -18,7 +29,7 @@
         <div class="row text-center pt-5">
             <div class="col-4"><a href="{{ path('admin_articles')}}">Articles</a></div>
             <div class="col-4">Utilisateurs</div>
-            <div class="col-4">Produits</div>
+            <div class="col-4"><a href="{{ path('admin_products')}}">Produits</a></div>
         </div>
     </div>
     <div class="container">
@@ -29,7 +40,9 @@
                 </a>
             </div>
             <div class="offset-4 col-4">
-                Ajout (<i class="fas fa-plus text-success"></i>)
+                <a href="{{ path('new_product')}}">
+                    Ajout (<i class="fas fa-plus text-success"></i>)
+                </a>
             </div>
         </div>
     </div>
@@ -92,3 +105,5 @@
 
 
 {% endblock %}
+
+{% block footer %}{% endblock %}

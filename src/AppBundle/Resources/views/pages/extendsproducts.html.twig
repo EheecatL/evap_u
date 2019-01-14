@@ -6,23 +6,44 @@
 
 {% endblock %}
 
-{% block dot %}
-
-    <div class="dotprod">
-        .
-    </div>
-
-{% endblock %}
 
 {% block content %}
-    
-    <div class="container">
+
+    <div class="container-fluid mb-5">
         <div class="row">
-            <div class="col-12 text-center mt-5">
-                <img src="{{ asset('img/logoiv.png') }}" class="img-fluid" width="25%">
+            <div class="col-3 text-center titres">Matériel</div>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <p>
+            La cigarette electronique reproduit les sensations d'une cigarette classique. Elle est composée d'une batterie et d'un clearomiseur permettant d'accueillir le eliquide destiné à être vaporisé. Lors de l'aspiration, le eliquide, mélangé à l'air inspiré, est diffusé sous forme de vapeur reproduisant la fumée d'une cigarette.
+        </p>
+        <p class="text-center"><strong>Vous pouvez cliquer sur chaque catégorie afin d'avoir plus de détails sur les différentes pièces d'une cigarette électronique.</strong></p>
+    </div>
+
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-4 productsborders">
+                <a href="{{ path('info_products_clearomiseurs') }}">
+                    <img src="{{ asset('img/atomiseurs.jpg') }}" class="img-fluid" width="40%" >
+                </a>
+                <h4 class="mb-5">Atomiseurs</h4>
+                <p class="text-justify">Le clearomiseur de la cigarette électronique est composé d'un réservoir, d'une résistance (composé d'un fil résistif et d'une mèche coton) et d'un embout buccal (drip tip). Les mèches de la résistance transportent par capillarité le eliquide contenu dans le réservoir jusqu'au fil résistif. La pression sur le bouton d'activation de la batterie provoque la chauffe du fil résistif et vaporise le eliquide en contact avec celui-ci. La vapeur produite remonte jusqu'à l'embout buccal (drip tip) et est inhalé par l'utilisateur.</p>
             </div>
-            <div class="col-12 text-center mt-5" style="color: rgba(52, 73, 94, 1)">
-                <h1>EN CONSTRUCTION</h1>
+            <div class="col-4 productsborders">
+                <a href="{{ path('info_products_mods') }}">
+                    <img src="{{ asset('img/boxes.jpg') }}" class="img-fluid" width="40%" >
+                </a>
+                <h4 class="mb-5">Boxs</h4>
+                <p class="text-justify">La batterie est le dispositif alimentant en énergie électrique la résistance de votre cigarette electronique. Deux points importants sont à prendre en compte dans le choix de votre kit de cigarette électronique : l'autonomie de la batterie et sa puissance, c'est à dire sa capacité à produire de la vapeur.</p>
+            </div>
+            <div class="col-4 productsborders">
+                <a href="{{ path('info_products_accessories') }}">
+                <img src="{{ asset('img/accessoires.jpg') }}" class="img-fluid" width="40%" >
+                </a>
+                <h4 class="mb-5">Accessoires</h4>
+                <p class="text-justify">Il existe une multitude d'accessoires. Que ce soit des accus pour une boxe mécanique, ou des chargeurs pour une boxe électronique, chaque accessoire de vape peut-être différent. Il existe aussi des cotons, des fils résistifs, etc... Ils peuvent aussi se décliner sous forme d'étui, d'outillage ou même de pièces de remplacement pour une utilisation plus poussée des connaisseurs.</p>
             </div>
         </div>
     </div>

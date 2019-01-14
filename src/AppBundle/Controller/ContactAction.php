@@ -11,6 +11,7 @@ namespace AppBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Form\Extension\Core\Type\ResetType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
@@ -61,6 +62,10 @@ class ContactAction extends Controller
             $sn = $this->getDoctrine()->getManager();
             $sn->persist($contact);
             $sn->flush();
+            $this->addFlash("notice", "Votre message a bien été envoyé");
+
+            return $this->redirect($request->getUri());
+
         }
 
         return $this->render(

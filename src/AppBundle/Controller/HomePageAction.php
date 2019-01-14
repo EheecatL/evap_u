@@ -24,4 +24,21 @@ class HomePageAction extends Controller
         return $this->render('@App/pages/extendshomepage.html.twig');
 
     }
+
+    /**
+     * @Route("/connection", name="connection")
+     */
+    public function ConnectionAction()
+    {
+
+        return $this->render('@App/pages/extendsconnection.html.twig');
+
+    }
+
+    public function getParent()
+    {
+        return 'FOSUserBundle';
+    }
+
 }
+

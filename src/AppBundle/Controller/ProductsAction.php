@@ -21,7 +21,8 @@ class ProductsAction extends Controller
     /**
      * @Route("/products", name="products")
      */
-    public function ArticlesListAction(){
+    public function ArticlesListAction()
+    {
 
 
         $repository = $this
@@ -40,9 +41,10 @@ class ProductsAction extends Controller
     /**
      * @Route("/research/products", name="research_products")
      */
-    public function ResearchArticles(Request $request){
+    public function ResearchProducts(Request $request)
+    {
 
-        $research=$request->query->get('research');
+        $research = $request->query->get('research');
 
         $repository = $this
             ->getDoctrine()
@@ -50,33 +52,78 @@ class ProductsAction extends Controller
         $results = $repository->getProductContent($research);
 
 
-
-
         return $this->render("@App/pages/extendsresearchproducts.html.twig",
             [
-                'results'=>$results,
-                'reserch'=>$research
+                'results' => $results,
+                'reserch' => $research
             ]
 
         );
     }
 
     /**
-     * @Route("/info_products/{id}", name="info_products")
+     * @Route("/info_products_clearomiseurs", name="info_products_clearomiseurs")
      */
-    public function ArticleAction($id){
+    public function ProductClearomiseursAction(Request $request){
+
+        $research = $request->query->get('category');
 
         $repository = $this
             ->getDoctrine()
             ->getRepository(Products::class);
+        $results = $repository->getProductClearomiseursCategory($research);
 
-        $articles = $repository->find($id);
 
-        return $this->render("@App/pages/extendsproduct.html.twig",
+        return $this->render("@App/pages/extendsproductsclearomiseurs.html.twig",
             [
-                'article' => $articles
+                'product' => $results,
             ]
+
         );
+
     }
 
+    /**
+     * @Route("/info_products_mods", name="info_products_mods")
+     */
+    public function ProductModsAction(Request $request){
+
+        $research = $request->query->get('category');
+
+        $repository = $this
+            ->getDoctrine()
+            ->getRepository(Products::class);
+        $results = $repository->getProductModsCategory($research);
+
+
+        return $this->render("@App/pages/extendsproductsmods.html.twig",
+            [
+                'product' => $results,
+            ]
+
+        );
+
+    }
+
+    /**
+     * @Route("/info_products_accessories", name="info_products_accessories")
+     */
+    public function ProductAccessoriesAction(Request $request){
+
+        $research = $request->query->get('category');
+
+        $repository = $this
+            ->getDoctrine()
+            ->getRepository(Products::class);
+        $results = $repository->getProductAccessoriesCategory($research);
+
+
+        return $this->render("@App/pages/extendsproductsaccessories.html.twig",
+            [
+                'product' => $results,
+            ]
+
+        );
+
+    }
 }

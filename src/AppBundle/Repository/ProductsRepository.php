@@ -10,4 +10,56 @@ namespace AppBundle\Repository;
  */
 class ProductsRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function getProductClearomiseursCategory($title)
+    {
+        $queryBuilder = $this->createQueryBuilder('ap');
+
+        $query = $queryBuilder
+            ->select('ap')
+            ->where('ap.category=:category')
+            ->setParameter('category', 'atomiseur')
+            ->getQuery();
+
+        $results = $query->getArrayResult();
+
+        return $results;
+
+
+    }
+
+    public function getProductModsCategory($title)
+    {
+        $queryBuilder = $this->createQueryBuilder('ap');
+
+        $query = $queryBuilder
+            ->select('ap')
+            ->where('ap.category=:category')
+            ->setParameter('category', 'mods')
+            ->getQuery();
+
+        $results = $query->getArrayResult();
+
+        return $results;
+
+
+    }
+
+    public function getProductAccessoriesCategory($title)
+    {
+        $queryBuilder = $this->createQueryBuilder('ap');
+
+        $query = $queryBuilder
+            ->select('ap')
+            ->where('ap.category=:category')
+            ->setParameter('category', 'accessoires')
+            ->getQuery();
+
+        $results = $query->getArrayResult();
+
+        return $results;
+
+
+    }
+
+    
 }

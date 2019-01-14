@@ -99,7 +99,7 @@ class ArticlesAdminAction extends Controller
      * @Route("/admin/updatearticle/{id}", name="update_article")
      */
 
-    public function MiseajourLivreAction(Request $request, $id)
+    public function UpdateArticleAction(Request $request, $id)
     {
         $repository = $this->getDoctrine()->getRepository(Articles::class);
         $article = $repository->find($id);

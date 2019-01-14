@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Ubuntu', sans-serif;
+    color: rgba(52, 73, 94, 1) ;
 }
 
 .cls {
@@ -166,40 +167,11 @@ a:hover{
     left: 180px;
 }
 
-.dotart{
-    position: absolute;
-    top: 50px;
-    left: 655px;
-    color: rgb(247,246,210);
-    font-weight: bold;
-    font-size: 30px;
-}
 
-.dotprod{
-    position: absolute;
-    top: 50px;
-    left: 775px;
-    color: rgb(247,246,210);
-    font-weight: bold;
-    font-size: 30px;
-}
-
-.dotfor{
-    position: absolute;
-    top: 50px;
-    left: 655px;
-    color: rgb(247,246,210);
-    font-weight: bold;
-    font-size: 30px;
-}
-
-.dotprof{
-    position: absolute;
-    top: 50px;
-    left: 655px;
-    color: rgb(247,246,210);
-    font-weight: bold;
-    font-size: 30px;
+input::-webkit-input-placeholder {
+    color: black; /*Change the placeholder color*/
+    opacity: 0.5; /*Change the opacity between 0 and 1*/
+    text-align: right;
 }
 
 .articles{
@@ -263,8 +235,16 @@ a:hover{
     color: rgb(247,246,210);
 }
 
+.tbpmin{
+    font-size: 12px;
+}
+
+.tbpmin:hover{
+    color: rgba(191, 201, 202, 1);
+}
+
 .tbp:hover{
-    color: rgba(1, 50, 67, 1);
+    color: rgba(191, 201, 202, 1);
 }
 
 .contact{
@@ -281,3 +261,84 @@ a:hover{
     color: rgb(247,246,210);
     width: 100%;
 }
+
+.wrapper {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.form-signin {
+    max-width: 380px;
+    padding: 15px 35px 45px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.form-signin-heading,
+.checkbox {
+    margin-bottom: 30px;
+}
+
+.checkbox {
+    font-weight: normal;
+}
+
+.form-control {
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+}
+
+input[type="text"] {
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+input[type="password"] {
+    margin-bottom: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.loginBtn {
+    box-sizing: border-box;
+    position: relative;
+    margin: 0.2em;
+    padding: 0 15px 0 46px;
+    border: none;
+    text-align: left;
+    line-height: 34px;
+    white-space: nowrap;
+    color: #FFF;
+    width: 100%;
+    height: 40px;
+    border-radius: 7px;
+    font-size: 18px;
+    text-indent: 10%;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.loginBtn:before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 34px;
+    height: 100%;
+}
+.loginBtn:focus {
+    outline: none;
+}
+.loginBtn:active {
+    box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
+}
+
+.prof2 {
+    display: none;
+}
+
+

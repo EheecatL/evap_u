@@ -1,0 +1,55 @@
+{% extends '@App/base/index.html.twig' %}
+
+{% block title %}
+
+    Profil
+
+{% endblock %}
+
+{% block content %}
+
+    <div class="container-fluid mb-5">
+        <div class="row">
+            <div class="col-3 text-center titres">Profil</div>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <h1>
+            {{ app.user.username }}
+        </h1>
+        <p>
+            {{ app.user.email }}
+        </p>
+        <p>
+            Age : {{ app.user.age }} ans
+        </p>
+        <p>
+            {{ app.user.description }}
+        </p>
+        <h3>
+            Matériel utilisé :
+        </h3>
+
+        {% for user in users %}
+
+            {% for product in user.products %}
+
+
+<p>
+    <img src="{{ asset('uploads/img/'~product.image) }}" width="50%">
+</p>
+                    <p>
+                        {{ product.name }}
+                    </p>
+
+
+
+            {% endfor %}
+
+        {% endfor %}
+
+
+    </div>
+
+{% endblock %}
