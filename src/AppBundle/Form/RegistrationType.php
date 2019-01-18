@@ -19,6 +19,8 @@ class RegistrationType extends AbstractType
             ->add('description', TextareaType::class)
             ->add('products', EntityType::class, [
                 'class' => 'AppBundle\Entity\Products',
+                'multiple' => 'true',
+                'expanded' => 'true',
                 'choice_label' => 'name',
                 'label' => 'Produit favori',
             ])

@@ -2,6 +2,7 @@
 
 namespace AppBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -33,6 +34,7 @@ class Products
     }
 
     /**
+     * Many Groups have Many Users.
      * @ORM\ManyToMany(targetEntity="User", mappedBy="products")
      */
     private $user;
@@ -134,13 +136,17 @@ class Products
     }
 
     /**
-     * @param mixed $user
+     * @param ArrayCollection $user
      */
-    public function setUser($user)
+    public function setUser(ArrayCollection $user)
     {
         $this->user = $user;
     }
 
 
+    public function __construct()
+    {
+        $this->user = new ArrayCollection();
+    }
 
 }

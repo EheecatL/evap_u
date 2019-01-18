@@ -31,14 +31,14 @@
             Matériel utilisé :
         </h3>
 
-        {% for user in users %}
-
-            {% for product in user.products %}
 
 
-<p>
-    <img src="{{ asset('uploads/img/'~product.image) }}" width="50%">
-</p>
+            {% for product in app.user.products %}
+
+
+                    <p>
+                        <img src="{{ asset('uploads/img/'~product.image) }}" width="50%">
+                    </p>
                     <p>
                         {{ product.name }}
                     </p>
@@ -47,7 +47,7 @@
 
             {% endfor %}
 
-        {% endfor %}
+
 
 
     </div>

@@ -3,6 +3,7 @@
 
 namespace AppBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -23,14 +24,15 @@ class User extends BaseUser
     public function __construct()
     {
         parent::__construct();
-        // your own logic
+        $this->products = new ArrayCollection();
     }
 
     /**
+     * Many Users have Many Products.
      * @ORM\ManyToMany(targetEntity="Products", inversedBy="user")
-     * @ORM\JoinColumn(name="product_id", referencedColumnName="id")
+     * @ORM\JoinTable(name="user_products")
      */
-    private $products;
+    protected $products;
 
     /**
      * @var string
@@ -93,11 +95,11 @@ class User extends BaseUser
     }
 
     /**
-     * @param mixed $product
+     * @param ArrayCollection $products
      */
-    public function setProducts($products)
+    public function setProducts(ArrayCollection $products)
     {
-        $this->product = $products;
+        $this->products = $products;
     }
 
 
