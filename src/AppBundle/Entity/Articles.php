@@ -145,6 +145,7 @@ class Articles
      */
     public function setImage($image)
     {
+
         $this->image = $image;
     }
 
