@@ -16,7 +16,7 @@ class HomePageAction extends Controller
 
 {
     /**
-     * @Route("/homepage", name="homepage")
+     * @Route("/", name="homepage")
      */
     public function HomeAction()
     {
@@ -37,7 +37,9 @@ class HomePageAction extends Controller
 
     public function getParent()
     {
+
         return 'FOSUserBundle';
+
     }
 
 }

@@ -15,9 +15,22 @@
             <div class="col-6 d-flex align-items-center justify-content-center homebox hbarticles">
                 <a href="{{ path('articles') }}"><div class="hptxt">Articles</div></a>
             </div>
+
+            {% if app.user %}
+
             <div class="col-6 d-flex align-items-center justify-content-center homebox hbprofile">
-                <div class="hptxt">Profil</div>
+                <a href="{{ path('profile') }}"><div class="hptxt">Profil</div></a>
             </div>
+
+            {% else %}
+
+            <div class="col-6 d-flex align-items-center justify-content-center homebox hbprofile">
+                <a href="{{ path('fos_user_security_login') }}"><div class="hptxt">Connexion</div></a>
+            </div>
+
+            {% endif %}
+
+
         </div>
         <div class="row">
             <div class="col-6 d-flex align-items-center justify-content-center homebox hbproducts">
@@ -34,4 +47,5 @@
 {% endblock %}
 
 {% block footer %}{% endblock %}
+
 

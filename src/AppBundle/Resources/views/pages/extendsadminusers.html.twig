@@ -64,12 +64,12 @@
         <div class="row text-center">
             <div class="col-4">
 
-                NOM
+                PSEUDO
 
             </div>
             <div class="offset-1 col-2">
 
-                CATEGORIE
+                EMAIL
 
             </div>
             <div class="offset-2 col-2">
@@ -81,28 +81,24 @@
     <div class="container listadmin pt-1 pb-1 mb-5">
 
 
-        {% for product in products %}
+        {% for user in users %}
 
             <hr>
             <div class="container mb-4">
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-3 text-center">
 
-                        {{ product.name }}
-
-                    </div>
-                    <div class="offset-2 col-2 align-self-center">
-
-                        {{ product.category }}
+                        {{ user.username }}
 
                     </div>
-                    <div class="offset-2 align-self-center">
-                        <a href="{{ path('update_product', {'id': product.id}) }}">
-                            <button type="button" class="btn btn-primary">
-                                Modifier
-                            </button>
-                        </a>
-                        <a href="{{ path('del_product', {'id': product.id}) }}">
+                    <div class="offset-2 col-2 align-self-center text-center">
+
+                        {{ user.email }}
+
+                    </div>
+
+                    <div class="offset-3 align-self-center text-center">
+                        <a href="{{ path('del_user', {'id': user.id}) }}">
                             <button type="button" class="btn btn-danger">
                                 Supprimer
                             </button>
