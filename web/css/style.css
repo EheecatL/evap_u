@@ -372,11 +372,7 @@ and (orientation : portrait) {
     }
 
     .hplogo{
-        position: absolute;
-        top: 42%;
-        left: 40%;
-        z-index: 99;
-        width: 20%;
+        display: none;
     }
 
     .responsivetextcenter{
