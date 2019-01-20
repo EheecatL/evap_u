@@ -15,6 +15,47 @@
 
 {% block header %}
 
+    <!-- Header Iphone -->
+
+    <div class="headeriphone">
+        <div class="container-fluid d-flex justify-content-beetween">
+            <div class="row">
+                <div class="offset-3 col-6 pt-2 pb-2">
+                    <img src="{{ asset('img/logobrand.png') }}" class="img-fluid">
+                </div>
+                <div class="row mb-3">
+                <div class="ml-2 col-3"><a href="{{ path('articles') }}" class="tbp">Articles</a></div>
+                <div class="col-3"><a href="{{ path('products') }}" class="tbp">Matériel</a></div>
+                <div class="col-3"><a href="{{ path('contact') }}" class="tbp">Contact</a></div>
+                {% if app.user %}
+                    <div class="col-1 font-weight-bold tbp prof">
+                        <a href="{{ path('profile') }}" class="tbp">
+                            {{ app.user.username }}
+                        </a>
+                    </div>
+                {% else %}
+                    <div class="col-1 tbp">
+                        <a href="{{ path('fos_user_security_login') }}" class="tbp">
+                            Connexion
+                        </a>
+                    </div>
+
+                {% endif %}
+                </div>
+                    <div class="row">
+                        <div class="col-2">
+                            <form action="{{ path('research_articles') }}" method="get" class="d-flex align-items-center">
+                                <input name="research" type="text" placeholder="Articles" class="mr-4">
+                                <input type="image" name="submit" src="{{ asset("img/search.svg") }}" style="width: 50%">
+                            </form>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Computer -->
+
     <header class="mb-5">
         <div class="container-fluid header">
             <div class="row text-center align-items-center text-light">
@@ -30,18 +71,18 @@
                 {% if app.user %}
                     <div class="col-1 font-weight-bold tbp prof">
                         {{ app.user.username }}
-                    <div class="col-1 prof2">
-                        <div>
-                            <a href="{{ path('profile') }}" class="tbp tbpmin">
-                            Profil
-                            </a>
+                        <div class="col-1 prof2">
+                            <div>
+                                <a href="{{ path('profile') }}" class="tbp tbpmin">
+                                    Profil
+                                </a>
+                            </div>
+                            <div>
+                                <a href="{{ path('fos_user_security_logout') }}" class="tbp tbpmin">
+                                    Déconnexion
+                                </a>
+                            </div>
                         </div>
-                        <div>
-                            <a href="{{ path('fos_user_security_logout') }}" class="tbp tbpmin">
-                            Déconnexion
-                            </a>
-                        </div>
-                    </div>
                     </div>
                     <div class="col-2">
                         <form action="{{ path('research_articles') }}" method="get" class="d-flex align-items-center">

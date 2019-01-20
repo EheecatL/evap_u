@@ -160,6 +160,10 @@ a:hover{
     position: relative;
 }
 
+.headeriphone {
+    display: none;
+}
+
 .brand{
     font-size: 50px;
     color: rgb(247,246,210);
@@ -341,35 +345,20 @@ input[type="password"] {
     display: none;
 }
 
-/*IPHONE X Logo Page d'accueil Portrait*/
-
-@media only screen
-and (min-device-width : 375px)
-and (max-device-width : 812px)
-and (orientation : portrait) {
-
-    body{
-        overflow: hidden;
-    }
-
-    .hplogo{
-        position: absolute;
-        top: 48%;
-        left: 46%;
-        z-index: 99;
-        width: 20%;
-    }
-}
-
-/*IPHONE 6/7/8 Logo Page d'accueil Portrait*/
+/*IPHONE 6/7/8 Portrait*/
 
 @media only screen
 and (min-device-width : 375px)
 and (max-device-width : 667px)
 and (orientation : portrait) {
 
-    body{
-        overflow: hidden;
+    .header {
+        display: none;
+    }
+
+    .headeriphone {
+        display: block;
+        background-color: rgba(52, 73, 94, 1);
     }
 
     .hplogo{
@@ -380,6 +369,9 @@ and (orientation : portrait) {
         width: 20%;
     }
 }
+
+
+
 
 
 
