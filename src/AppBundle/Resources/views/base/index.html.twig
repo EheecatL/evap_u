@@ -24,32 +24,32 @@
                     <img src="{{ asset('img/logobrand.png') }}" class="img-fluid">
                 </div>
                 <div class="row mb-3">
-                <div class="ml-2 col-3"><a href="{{ path('articles') }}" class="tbp">Articles</a></div>
-                <div class="col-3"><a href="{{ path('products') }}" class="tbp">Matériel</a></div>
-                <div class="col-3"><a href="{{ path('contact') }}" class="tbp">Contact</a></div>
-                {% if app.user %}
-                    <div class="col-1 font-weight-bold tbp prof">
-                        <a href="{{ path('profile') }}" class="tbp">
-                            {{ app.user.username }}
-                        </a>
-                    </div>
-                {% else %}
-                    <div class="col-1 tbp">
-                        <a href="{{ path('fos_user_security_login') }}" class="tbp">
-                            Connexion
-                        </a>
-                    </div>
-
-                {% endif %}
-                </div>
-                    <div class="row">
-                        <div class="col-2">
-                            <form action="{{ path('research_articles') }}" method="get" class="d-flex align-items-center">
-                                <input name="research" type="text" placeholder="Articles" class="mr-4">
-                                <input type="image" name="submit" src="{{ asset("img/search.svg") }}" style="width: 50%">
-                            </form>
+                    <div class="ml-2 col-3"><a href="{{ path('articles') }}" class="tbp">Articles</a></div>
+                    <div class="col-3"><a href="{{ path('products') }}" class="tbp">Matériel</a></div>
+                    <div class="col-3"><a href="{{ path('contact') }}" class="tbp">Contact</a></div>
+                    {% if app.user %}
+                        <div class="col-1 font-weight-bold tbp prof">
+                            <a href="{{ path('profile') }}" class="tbp">
+                                {{ app.user.username }}
+                            </a>
                         </div>
+                    {% else %}
+                        <div class="col-1 tbp">
+                            <a href="{{ path('fos_user_security_login') }}" class="tbp">
+                                Connexion
+                            </a>
+                        </div>
+
+                    {% endif %}
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <form action="{{ path('research_articles') }}" method="get" class="d-flex align-items-center">
+                            <input name="research" type="text" placeholder="Articles" class="mr-4">
+                            <input type="image" name="submit" src="{{ asset("img/search.svg") }}" style="width: 50%">
+                        </form>
                     </div>
+                </div>
             </div>
         </div>
     </div>
