@@ -358,7 +358,7 @@ input[type="password"] {
 
 @media only screen
 and (min-device-width : 375px)
-and (max-device-width : 667px)
+and (max-device-width : 812px)
 and (orientation : portrait) {
 
 
@@ -402,52 +402,11 @@ and (orientation : portrait) {
     }
 }
 
+
+
 @media only screen
 and (min-device-width : 375px)
-and (max-device-width : 667px)
-and (orientation : landscape) {
-
-    .header {
-        display: none;
-    }
-
-    .headeriphone {
-        display: block;
-        background-color: rgba(52, 73, 94, 1);
-    }
-
-    .hplogo{
-        position: absolute;
-        top: 42%;
-        left: 40%;
-        z-index: 99;
-        width: 20%;
-    }
-
-    .responsivetextcenter{
-        text-align: center;
-        margin-top: 10px;
-    }
-
-    .responsivereturn{
-        display: none;
-    }
-
-    iframe{
-        height: 150%;
-    }
-
-    .responsivelogout{
-        display: block;
-    }
-
-    .form-signinloginresponsive{
-        max-width: 50%;
-        margin-top: 40%;
-    }
-}
-
-@media only screen
+and (max-device-width : 812px)
 and (orientation:landscape){
 
     html{
@@ -465,7 +424,23 @@ and (orientation:landscape){
 }
 
 @media only screen
+and (min-device-width : 375px)
+and (max-device-width : 812px)
 and (orientation:portrait){
+
+    #turn{
+        display:none;
+    }
+
+    #content{
+        display:block;
+    }
+
+}
+
+@media only screen
+and (min-width: 813px)
+and (orientation:landscape){
 
     #turn{
         display:none;
