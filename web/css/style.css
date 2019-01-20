@@ -357,7 +357,7 @@ input[type="password"] {
 /*IPHONE 6/7/8 Portrait*/
 
 @media only screen
-and (min-device-width : 375px)
+and (min-device-width : 320px)
 and (max-device-width : 812px)
 and (orientation : portrait) {
 
@@ -401,7 +401,7 @@ and (orientation : portrait) {
 
 
 @media only screen
-and (min-device-width : 375px)
+and (min-device-width : 320px)
 and (max-device-width : 812px)
 and (orientation:landscape){
 
@@ -420,7 +420,7 @@ and (orientation:landscape){
 }
 
 @media only screen
-and (min-device-width : 375px)
+and (min-device-width : 320px)
 and (max-device-width : 812px)
 and (orientation:portrait){
 
