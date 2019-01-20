@@ -341,4 +341,27 @@ input[type="password"] {
     display: none;
 }
 
+/*IPHONE X*/
+
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3)
+and (orientation : portrait) {
+
+    body{
+        overflow: hidden;
+    }
+
+    .hplogo{
+        position: absolute;
+        top: 44%;
+        left: 40%;
+        z-index: 99;
+        width: 20%;
+    }
+}
+
+
+
 
