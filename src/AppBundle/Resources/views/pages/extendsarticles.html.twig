@@ -10,7 +10,7 @@
 
     <div class="container-fluid mb-5">
         <div class="row">
-            <div class="col-3 text-center titres">Articles</div>
+            <div class="col-lg-3 col-sm-6 text-center titres">Articles</div>
         </div>
     </div>
 
@@ -18,36 +18,36 @@
 
         {% if loop.index is odd %}
 
-            <div class="container-fluid bgcg pt-5 pb-5  ">
+            <div class="container-fluid bgcg pt-4 pb-4">
 
         {% endif %}
 
         {% if loop.index is even %}
 
-            <div class="container-fluid pt-5 pb-5">
+        <div class="container-fluid pt-4 pb-4">
 
         {% endif %}
 
-                <div class="container mb-5">
-                    <div class="row">
-                        <div class="col-4">
-                            <img src="{{ asset('uploads/img/'~article.image) }}" class="img-fluid">
-                        </div>
-                        <div class="col-8 align-self-center">
-                            <h4 class="d-flex align-self-center">{{ article.title }}</h4>
-                            <p><em>{{ article.releasedate | date("d/m/y")}}</em> -
-                                <a href="{{ path('info_article', {'id': article.id}) }}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-12 text-center">
+                    <img src="{{ asset('uploads/img/'~article.image) }}" class="img-fluid">
+                </div>
+                <div class="col-lg-8 align-self-center responsivetextcenter">
+                    <h4 class="d-flex align-self-center">{{ article.title }}</h4>
+                    <p><em>{{ article.releasedate | date("d/m/y")}}</em> -
+                        <a href="{{ path('info_article', {'id': article.id}) }}">
                                                 <span class="read">
                                                     <strong>
                                                         Lire
                                                     </strong>
                                                      </span>
-                                    <i class="fas fa-wind"></i>
-                                </a>
-                        </div>
-                    </div>
+                            <i class="fas fa-wind"></i>
+                        </a>
                 </div>
             </div>
+        </div>
+        </div>
         </div>
 
 

@@ -352,6 +352,10 @@ and (min-device-width : 375px)
 and (max-device-width : 667px)
 and (orientation : portrait) {
 
+    body{
+        overflow-x: hidden;
+    }
+
     .header {
         display: none;
     }
@@ -368,6 +372,16 @@ and (orientation : portrait) {
         z-index: 99;
         width: 20%;
     }
+
+    .responsivetextcenter{
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .responsivereturn{
+        display: none;
+    }
+
 }
 
 

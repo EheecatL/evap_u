@@ -12,10 +12,10 @@
     <div class="container-fluid">
         <div class="row mb-5">
 
-            <div class="ml-5">
+            <div class="ml-3">
                     <i class="fas fa-arrow-left"></i>
             </div>
-            <div class="ml-2 align-self-center">
+            <div class="ml-2 align-self-center responsivereturn">
                 Retour aux articles
             </div>
 
@@ -26,13 +26,15 @@
 
     <div class="container mb-4">
         <div class="row">
-            <div class="col-12 text-center"><h3>{{ article.title }}</h3></div>
+            <div class="col-12 text-center mb-3"><h3>{{ article.title }}</h3></div>
         </div>
 
     <p class="offset-8 col-3">{{ article.releasedate | date("d/m/y")}}</p>
-    <img src="{{ asset('uploads/img/'~article.image) }}" class="img-fluid offset-3 col-6 align-items-center mb-5">
+    <div class="offset-3 col-6 text-center mb-3">
+        <img src="{{ asset('uploads/img/'~article.image) }}" class="img-fluid">
+    </div>
     <p class="offset-2 col-8 mb-5">{{ article.content|raw }}</p>
-    <p class="offset-9 col-3 srce">Source : {{ article.source }}</p>
+    <p class="offset-4 col-4 srce text-center mb-5">Source : {{ article.source }}</p>
     </div>
 
 {% endblock %}
