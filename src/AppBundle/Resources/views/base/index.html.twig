@@ -13,17 +13,27 @@
 </head>
 <body>
 
+<div class="container"  id="turn">
+    <div class="text-center col-12 mt-5 mb-5">
+        Le mode paysage n'est pas activé sur ce site. Merci de tourner votre smartphone.
+    </div>
+    <div class="offset-4 col-4 mb-5">
+        <img src="../img/logoiv.png" class="img-fluid">
+    </div>
+</div>
+
+<div id="content">
 {% block header %}
 
     <!-- Header Iphone -->
 
     <div class="headeriphone">
-        <div class="container-fluid d-flex justify-content-beetween">
+        <div class="container-fluid">
             <div class="row">
                 <div class="offset-3 col-6 pt-3 pb-4">
                     <img src="{{ asset('img/logobrand.png') }}" class="img-fluid">
                 </div>
-                <div class="row mb-3">
+                <div class="row mb-3 ">
                     <div class="ml-2 col-3"><a href="{{ path('articles') }}" class="tbp">Articles</a></div>
                     <div class="col-3"><a href="{{ path('products') }}" class="tbp">Matériel</a></div>
                     <div class="col-3"><a href="{{ path('contact') }}" class="tbp">Contact</a></div>
@@ -160,5 +170,6 @@
     });
 
 </script>
+</div>
 </body>
 </html>

@@ -7,7 +7,7 @@
     {% endif %}
 
     <div class="wrapper">
-        <div class="form-signin">
+        <div class="form-signin form-signinloginresponsive">
             <form action="{{ path("fos_user_security_check") }}" method="post">
                 <input type="hidden" name="_csrf_token" value="{{ csrf_token }}"/>
                 <h2 class="form-signin-heading">Connectez vous :</h2><br>
@@ -39,6 +39,9 @@
                         href="{{ path('fos_user_resetting_request') }}">Mot de passe oublié</a>
             </div>
         </div>
+    </div>
 
+    <div class="offset-lg-5 col-lg-2 offset-sm-3 col-sm-6 logologin">
+        <img src="../img/logoiv.png" class="img-fluid">
     </div>
 {% endblock fos_user_content %}

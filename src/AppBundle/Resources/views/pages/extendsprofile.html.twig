@@ -8,12 +8,18 @@
 
 {% block content %}
 
-    <div class="container-fluid mb-5">
+
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-3 text-center titres">Profil</div>
-            <div class="offset-6 col-3 align-self-center text-center">
+            <div class="col-lg-3 col-sm-6 text-center titres mb-3">Profil</div>
+            <div class="offset-lg-6 col-lg-3 align-self-center text-center mb-3">
                 <a href="{{ path('fos_user_profile_edit')}}" class="return">
                     Modifier vos informations
+                </a>
+            </div>
+            <div class="offset-lg-6 col-lg-3 align-self-center text-center mb-5 responsivelogout">
+                <a href="{{ path('fos_user_security_logout')}}" class="return">
+                    Déconnexion
                 </a>
             </div>
         </div>
@@ -29,9 +35,11 @@
         <p>
             Age : {{ app.user.age }} ans
         </p>
+        <div class="container">
         <p class="mb-5">
             {{ app.user.description }}
         </p>
+        </div>
         <h3 class="mb-5">
             Matériel utilisé :
         </h3>
@@ -43,7 +51,7 @@
 
                 {% for product in app.user.products %}
 
-                    <div class="col-6 mb-5 text-center">
+                    <div class="col-lg-6 mb-5 text-center">
                             <img src="{{ asset('uploads/img/'~product.image) }}" width="50%">
                         <h4>
                             {{ product.name }}
