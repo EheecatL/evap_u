@@ -242,6 +242,7 @@ input::-webkit-input-placeholder {
 
 .tbp{
     color: rgb(247,246,210);
+    text-align: center;
 }
 
 .tbpmin{
@@ -354,10 +355,57 @@ input[type="password"] {
     display: none;
 }
 
-/*IPHONE 6/7/8 Portrait*/
+/*ANDROID PORTRAIT*/
 
 @media only screen
-and (min-device-width : 320px)
+and (max-device-width : 640px)
+and (orientation:portrait) {
+
+    .header {
+        display: none;
+    }
+
+    .headeriphone {
+        display: block;
+        background-color: rgba(52, 73, 94, 1);
+    }
+
+    .hplogo{
+        display: none;
+    }
+
+    .responsivetextcenter{
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .responsivereturn{
+        display: none;
+    }
+
+    iframe{
+        height: 150%;
+    }
+
+    .responsivelogout{
+        display: block;
+    }
+
+    .form-signinloginresponsive{
+        max-width: 50%;
+        margin-top: 40%;
+    }
+
+
+    .padart {
+        padding-left: 35px;
+    }
+}
+
+/*IPHONE 6/7/8/X Portrait*/
+
+@media only screen
+and (min-device-width : 641px)
 and (max-device-width : 812px)
 and (orientation : portrait) {
 
@@ -396,9 +444,10 @@ and (orientation : portrait) {
         max-width: 50%;
         margin-top: 40%;
     }
+
 }
 
-
+/*Block landscape smartphone view*/
 
 @media only screen
 and (min-device-width : 320px)
@@ -447,6 +496,7 @@ and (orientation:landscape){
     }
 
 }
+
 
 
 

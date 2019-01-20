@@ -28,25 +28,29 @@
     <!-- Header Iphone -->
 
     <div class="headeriphone">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="offset-3 col-6 pt-3 pb-4">
                     <a href="{{ path('homepage') }}">
                     <img src="{{ asset('img/logobrand.png') }}" class="img-fluid">
                     </a>
                 </div>
-                <div class="row mb-3 ">
-                    <div class="ml-2 col-3"><a href="{{ path('articles') }}" class="tbp">Articles</a></div>
-                    <div class="col-3"><a href="{{ path('products') }}" class="tbp">Matériel</a></div>
-                    <div class="col-3"><a href="{{ path('contact') }}" class="tbp">Contact</a></div>
+                <div class="row mb-3 text-center">
+                    <div class="col-4 pb-2 padart">
+                        <a href="{{ path('articles') }}" class="tbp">
+                            Articles
+                        </a>
+                    </div>
+                    <div class="col-4"><a href="{{ path('products') }}" class="tbp">Matériel</a></div>
+                    <div class="col-4"><a href="{{ path('contact') }}" class="tbp">Contact</a></div>
                     {% if app.user %}
-                        <div class="col-1 font-weight-bold tbp prof">
+                        <div class="offset-4 col-4 font-weight-bold tbp">
                             <a href="{{ path('profile') }}" class="tbp">
                                 {{ app.user.username }}
                             </a>
                         </div>
                     {% else %}
-                        <div class="col-1 tbp">
+                        <div class="offset-4 col-4 tbp">
                             <a href="{{ path('fos_user_security_login') }}" class="tbp">
                                 Connexion
                             </a>
@@ -134,11 +138,11 @@
     <footer>
         <div class="footer container-fluid">
             <div class="row justify-content-between text-center pt-5 pb-5">
-                <a href="{{ path('legal_notices') }}"  class="col-4 tbp">
+                <a href="{{ path('legal_notices') }}"  class="col-lg-4 tbp mb-1">
                     <div>Mentions légales</div>
                 </a>
-                <div class="col-4">© Copyright By Evap'U</div>
-                <a href="{{ path('privacy_policy') }}"  class="col-4 tbp">
+                <div class="col-lg-4 mb-1">© Copyright By Evap'U</div>
+                <a href="{{ path('privacy_policy') }}"  class="col-lg-4 tbp">
                     <div>Politique de confidentialité</div>
                 </a>
             </div>
