@@ -341,12 +341,11 @@ input[type="password"] {
     display: none;
 }
 
-/*IPHONE X*/
+/*IPHONE X Logo Page d'accueil Portrait*/
 
 @media only screen
 and (min-device-width : 375px)
 and (max-device-width : 812px)
-and (-webkit-device-pixel-ratio : 3)
 and (orientation : portrait) {
 
     body{
@@ -355,7 +354,27 @@ and (orientation : portrait) {
 
     .hplogo{
         position: absolute;
-        top: 44%;
+        top: 48%;
+        left: 46%;
+        z-index: 99;
+        width: 20%;
+    }
+}
+
+/*IPHONE 6/7/8 Logo Page d'accueil Portrait*/
+
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : portrait) {
+
+    body{
+        overflow: hidden;
+    }
+
+    .hplogo{
+        position: absolute;
+        top: 42%;
         left: 40%;
         z-index: 99;
         width: 20%;
